@@ -10,11 +10,10 @@ double f(double x1, double y1, double x2, double y2)
     return std::sqrt(dx * dx + dy * dy);
 }
 
-// Функция t(a, b, c) — пока пустая
+// Функция t(a, b, c)
 bool t(double a, double b, double c)
 {
-    // Заглушка: вернём false, чтобы компилировалось
-    return false;
+    return ((a + b > c) && (b + c > a) && (a + c > b)) ? true : false;
 }
 
 int main()
