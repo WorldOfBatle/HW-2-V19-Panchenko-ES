@@ -18,6 +18,25 @@ bool t(double a, double b, double c)
 
 int main()
 {
+    std::cout << "Введите координаты трёх точек, x и y на каждую точку:";
+    double x1, y1, x2, y2, x3, y3;
+    std::cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+
+    // Вычисляем длины сторон
+    double a = f(x1, y1, x2, y2);
+    double b = f(x2, y2, x3, y3);
+    double c = f(x3, y3, x1, y1);
+
+    // Проверяем, можно ли построить треугольник
+    bool canExist = t(a, b, c);
+
+    // Вывод результатов
+
+    std::cout << "Длина стороны a = " << a << std::endl;
+    std::cout << "Длина стороны b = " << b << std::endl;
+    std::cout << "Длина стороны c = " << c << std::endl;
+
+    std::cout << (t(a, b, c) ? "Треугольник с такими сторонами существует." : "Треугольник с такими сторонами не существует.");
 
 	return 0;
 }
