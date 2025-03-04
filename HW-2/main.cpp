@@ -13,7 +13,7 @@ double calculateDistance(double x1, double y1, double x2, double y2)
 // Функция t(a, b, c)
 bool canFormTriangle(double a, double b, double c)
 {
-    return ((a + b > c) && (b + c > a) && (a + c > b)) ? true : false;
+    return (a + b > c) && (b + c > a) && (a + c > b);
 }
 
 int main()
